@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    short a = 5;
+    short b = 4;
+    short c = 3;
+    short d = 2;
+    short e = 1;
+    short h = 1;
+    short n = 3;
+
+    short result[100][3];
+
+    _asm {
+        mov cx, n
+        lea esi, result
+        mov bx, b
+
+        loop_start :
+        mov ax, a
+            add ax, bx
+            sub ax, c
+            cwd
+            idiv d
+            imul e
+            mov[esi], ax
+            add esi, 2
+            mov[esi], bx
+            add esi, 2
+            mov ax, n
+            sub ax, cx
+            inc ax
+            mov[esi], ax
+            add esi, 2
+            add bx, h
+            loop loop_start
+    }
+
+    printf("Function\tArgument\tIndex\n");
+    for (int i = 0; i < n; i++) {
+        printf("%d\t\t%d\t\t%d\n", result[i][0], result[i][1], result[i][2]);
+    }
+
+    return 0;
+}
