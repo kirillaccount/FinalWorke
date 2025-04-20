@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    short a = 5;
+    short ar = 5; 
     short b = 4;
     short c = 3;
     short d = 2;
@@ -17,7 +17,7 @@ int main() {
         mov bx, b
 
         loop_start :
-        mov ax, a
+        mov ax, ar
             add ax, bx
             sub ax, c
             cwd
