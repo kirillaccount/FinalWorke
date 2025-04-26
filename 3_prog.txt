@@ -6,7 +6,7 @@ int main() {
     short c = 3;
     short d = 2;
     short e = 1;
-    short h = 1;
+    short h = 1; //step
     short n = 3;
 
     short result[100][3];
