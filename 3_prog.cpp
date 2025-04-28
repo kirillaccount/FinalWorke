@@ -8,6 +8,7 @@ int main() {
     short e = 1;
     short h = 1; //step
     short n = 3;
+    int arr[10] = { -15, -10, -7, -2, 1, 3, 5, 7, 9, 10 };
 
     short result[100][3];
 
