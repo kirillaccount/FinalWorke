@@ -9,6 +9,12 @@ int main() {
     short h = 1; //step
     short n = 3;
     int arr[10] = { -15, -10, -7, -2, 1, 3, 5, 7, 9, 10 };
+    for (int i = 0; i < 10; i++) {
+	if (arr[i] % 2 == 0) {
+	    printf("%d ", arr[i]);
+        }
+    }
+    
 
     short result[100][3];
 
